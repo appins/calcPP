@@ -1,7 +1,7 @@
 ## calc++
 
 #### Why?
-It is exceptionally useful for calculations with tons of variubles, (say a grade or a gpa) and is open source
+It is exceptionally useful for calculations with tons of variables, (say a grade or a gpa) and is open source
 
 #### How do I use it
 Just enter a number and hit enter to add it to the "Stack"
