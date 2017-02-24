@@ -43,7 +43,7 @@ int main(){
         }
         
         else {
-            unsigned char noChange = isNoChange(input) * 0x80;
+            unsigned char noChange = isNoChange(input) << 7;
             int lookup = corr[input] | noChange;
 
             // This checks if there is an error beforehand. If you don't have this, it will always overwrite the entire vector
