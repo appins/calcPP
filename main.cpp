@@ -12,7 +12,11 @@ int main(){
     map<string, unsigned char> corr = {
         {"add", comms::ADD},
         {"sum", comms::ADD},
-        {"+"  , comms::ADD}
+        {"+"  , comms::ADD},
+        {"mul", comms::MUL},
+        {"product", comms::MUL},
+        {"*",   comms::MUL},
+        {"multiply", comms::MUL}
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable
@@ -39,10 +43,11 @@ int main(){
         }
         
         else {
-            int lookup = corr[input]; 
+            unsigned char noChange = isNoChange(input) * 0x80;
+            int lookup = corr[input] | noChange;
 
             // This checks if there is an error beforehand. If you don't have this, it will always overwrite the entire vector
-            if(!lookup){
+            if(!lookup || lookup == 0x80){
                 cout << "Command not found" << endl;
             }
             else {

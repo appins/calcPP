@@ -32,15 +32,15 @@ void dispVec ( const std::vector<double> &input, bool mainVec = true ){
         std::cout << "> ";
     }
 
-    // No line should contain more than 5 numbers...
+    // No line should contain more than 10 numbers...
     int newler = 0;
 
     // Display every entry, one at a time
     for( auto i : input ){
-        std::cout << i << " "; 
-        if(newler % 5 == 0 && newler != 0){
-            
+        if((newler % 10 == 0) && (newler != 0)){
+            std::cout << std::endl << "* "; 
         }
+        std::cout << i << " "; 
         newler++;
     }
 
@@ -51,6 +51,7 @@ void dispVec ( const std::vector<double> &input, bool mainVec = true ){
     std::cout << std::endl;
 }
 
+// Handle all of the operations
 std::vector<double> process ( const std::vector<double> &input, unsigned char command ){
 
     // A vector for our result(s)
@@ -69,6 +70,18 @@ std::vector<double> process ( const std::vector<double> &input, unsigned char co
             // Add it to the end and quit. This will be done alot
             res.push_back(temp);
             break; 
+        }
+        // Multiplication functions (product or * too)
+        case 2: {
+            double temp = 1;
+        
+            for( auto i: input ){
+                temp *= i;
+            }
+
+            // Add it to the new away.
+            res.push_back(temp);
+            break;
         }
 
         // This shouldn't be called unless there is some issue with corr
