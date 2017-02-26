@@ -7,7 +7,14 @@
 #include "funcs.hpp"
 
 bool isNumber(std::string s){
+    // There should only be one decimal point
+    bool seenDec = false;
+
     for (auto i : s){
+        if( i == '.' && !seenDec ){
+            seenDec = true;
+            continue;
+        }
         if( !std::isdigit(i) ){
             return false;
         }
