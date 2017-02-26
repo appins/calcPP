@@ -18,6 +18,7 @@ You might have an executable for your system just open that
 If not, type `make` in the main directory
 
 Just enter a number and hit enter to add it to the "Stack"
+
 ###### (It's just a vector)
 
 So far there are `2` commands
