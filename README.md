@@ -3,14 +3,6 @@
 #### Why?
 It is exceptionally useful for calculations with tons of variables, (say a grade or a gpa) and is open source
 
-#### Example use:
-```
-
-
-
-
-```
-
 #### How do I use it?
 
 You might have an executable for your system just open that
