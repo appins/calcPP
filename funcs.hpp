@@ -40,7 +40,7 @@ void dispVec ( const std::vector<double> &input, bool mainVec = true ){
         if((newler % 10 == 0) && (newler != 0)){
             std::cout << std::endl << "* "; 
         }
-        std::cout << i << " "; 
+        std::cout << i << " ";
         newler++;
     }
 
@@ -102,4 +102,10 @@ bool isNoChange ( std::string &input ){
 
     return false;
 
+}
+
+void toLowerCase(std::string &input){
+    for( auto &i : input){
+        i = tolower(i); 
+    }
 }

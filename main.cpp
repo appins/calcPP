@@ -43,6 +43,9 @@ int main(){
         }
         
         else {
+            // Put input into lower case
+            toLowerCase(input);
+
             unsigned char noChange = isNoChange(input) << 7;
             int lookup = corr[input] | noChange;
 
