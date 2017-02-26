@@ -10,7 +10,7 @@ namespace comms {
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd
-    const unsigned short NOCHANGE = 0x80;
+    const unsigned short NOCHANGE = 0xF0;
 }
 
 bool isNumber(std::string s);

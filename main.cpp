@@ -10,13 +10,19 @@ using namespace std;
 int main(){
     // Map all the commands to integers
     map<string, unsigned short> corr = {
+        // Words to be reconized as addition operators
         {"add", comms::ADD},
         {"sum", comms::ADD},
         {"+"  , comms::ADD},
-        {"mul", comms::MUL},
-        {"product", comms::MUL},
-        {"*",   comms::MUL},
-        {"multiply", comms::MUL}
+        // Words to be reconized as multiplication operators
+        {"mul",      comms::MUL},
+        {"product",  comms::MUL},
+        {"*",        comms::MUL},
+        {"multiply", comms::MUL},
+        // Words to be reconized as mean operators (Average)
+        {"mean",    comms::MEAN},
+        {"+/",      comms::MEAN},
+        {"average", comms::MEAN}
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

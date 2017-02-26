@@ -83,10 +83,30 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             res.push_back(temp);
             break;
         }
+        // Average (or mean) function
+        case 3: {
+            double temp = 0;
 
-        // This shouldn't be called unless there is some issue with corr
+            for( auto i : input ){
+                temp += i;
+            }
+
+            temp /= input.size();
+
+            res.push_back(temp);
+
+            break;
+        }
+
+        // This shouldn't be called unless there is some issue matching commands
         default: {
+            res = input;
             std::cout << "Command not found" << std::endl;
+
+            // If this was called with a nonzero command, there is definately an issue
+            if( command ){
+                std::cout << "Please report that the command " << command << " might be broken." << std::endl;
+            }
         }
     }
 
