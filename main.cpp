@@ -9,7 +9,7 @@ using namespace std;
 
 int main(){
     // Map all the commands to integers
-    map<string, unsigned char> corr = {
+    map<string, unsigned short> corr = {
         {"add", comms::ADD},
         {"sum", comms::ADD},
         {"+"  , comms::ADD},
@@ -46,11 +46,11 @@ int main(){
             // Put input into lower case
             toLowerCase(input);
 
-            unsigned char noChange = isNoChange(input) << 7;
+            unsigned short noChange = isNoChange(input) << 7;
             int lookup = corr[input] | noChange;
 
             // This checks if there is an error beforehand. If you don't have this, it will always overwrite the entire vector
-            if(!lookup || lookup == 0x80){
+            if( lookup == noChange ){
                 cout << "Command not found" << endl;
             }
             else {

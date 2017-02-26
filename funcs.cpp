@@ -52,7 +52,7 @@ void dispVec ( const std::vector<double> &input, bool mainVec){
 }
 
 // Handle all of the operations
-std::vector<double> process ( const std::vector<double> &input, unsigned char command ){
+std::vector<double> process ( const std::vector<double> &input, unsigned short command ){
 
     // A vector for our result(s)
     std::vector<double> res {};
