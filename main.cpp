@@ -22,7 +22,10 @@ int main(){
         // Words to be reconized as mean operators (Average)
         {"mean",    comms::MEAN},
         {"+/",      comms::MEAN},
-        {"average", comms::MEAN}
+        {"average", comms::MEAN},
+        // Words to be reconized as clear operators
+        {"clear", comms::CLEAR},
+        {"clr",   comms::CLEAR},
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

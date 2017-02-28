@@ -7,6 +7,8 @@ namespace comms {
     const unsigned short ADD = 1;
     const unsigned short MUL = 2;
     const unsigned short MEAN = 3;
+    const unsigned short CLEAR = 4;
+    const unsigned short DEL = 5;
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd

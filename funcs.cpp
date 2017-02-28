@@ -97,6 +97,10 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
 
             break;
         }
+        // Clear the array. We don't actually have to do anyting here, which is nice
+        case 4: {
+            break;
+        }
 
         // This shouldn't be called unless there is some issue matching commands
         default: {
