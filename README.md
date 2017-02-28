@@ -5,7 +5,7 @@ It is exceptionally useful for calculations with tons of variables, (say a grade
 
 #### How do I use it?
 
-You might have an executable for your system just open that
+You might have an executable for your system just open that (In linux, open a terminal, cd into the directory, and type ./calcpp)
 
 If not, type `make` in the main directory
 
@@ -39,13 +39,18 @@ Just enter a number and hit enter to add it to the "Stack"
 
 ###### (It's just a vector)
 
-So far there are `3` commands
-
+### Math commands
 | Command | Shortcut | Function |
 |---------|----------|----------|
 | `ADD` | `+` | Take the sum of every number |
 | `MUL` | `*` | Take the product of every number |
 | `MEAN` | `+/` | Take the average of every number |
+
+### Array modification commands
+| Command | Shortcut | Function |
+|---------|----------|----------|
+| `CLEAR` | `=0` | Clear the entire array |
+| `DELETE` | `--1` | Delte the newest element |
 
 #### One more thing
 All commands will overwrite the vector by default. Add `_` add the end of a command (say `add_`) to disable this
