@@ -9,6 +9,7 @@ using namespace std;
 
 int main(){
     // Map all the commands to integers
+    // An attemp should be made to make, at least the basic functions, work with just the numberpad
     map<string, unsigned short> corr = {
         // Words to be reconized as addition operators
         {"add", comms::ADD},
@@ -26,6 +27,12 @@ int main(){
         // Words to be reconized as clear operators
         {"clear", comms::CLEAR},
         {"clr",   comms::CLEAR},
+        {"=0",    comms::CLEAR},
+        // Delete operators
+        {"delte", comms::DEL},
+        {"del"  , comms::DEL},
+        {"--1", comms::DEL}
+
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

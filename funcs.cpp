@@ -71,6 +71,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             res.push_back(temp);
             break; 
         }
+
         // Multiplication functions (product or * too)
         case 2: {
             double temp = 1;
@@ -83,6 +84,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             res.push_back(temp);
             break;
         }
+
         // Average (or mean) function
         case 3: {
             double temp = 0;
@@ -97,8 +99,20 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
 
             break;
         }
+
         // Clear the array. We don't actually have to do anyting here, which is nice
         case 4: {
+            break;
+        }
+
+        // Delete a single element from the end
+        case 5: {
+            res = input; 
+
+            if(res.size() > 0){
+                res.pop_back();
+            }
+
             break;
         }
 
