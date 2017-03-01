@@ -34,9 +34,9 @@ int main(){
         {"--1", comms::DEL},
         // Max commands
         {"max", comms::MAX},
-        // Treat * like a wildcard or a set of wildcards
+        // Treat * like a wildcard or a set of wildcards. That is the only way to make sense of this command
         {"123*9", comms::MAX},
-
+        
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

@@ -10,7 +10,13 @@ bool isNumber(std::string s){
     // There should only be one decimal point
     bool seenDec = false;
 
+    bool canBeMinus = true;
+
     for (auto i : s){
+        if( i == '-' && canBeMinus ){
+            canBeMinus = false;
+            continue;
+        }
         if( i == '.' && !seenDec ){
             seenDec = true;
             continue;
@@ -18,6 +24,7 @@ bool isNumber(std::string s){
         if( !std::isdigit(i) ){
             return false;
         }
+        canBeMinus = false;
     }
 
     return true;
@@ -87,6 +94,12 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
 
         // Average (or mean) function
         case 3: {
+
+            // If input size is zero, exit before other code is done
+            if( !input.size() ){
+                break;
+            }
+
             double temp = 0;
 
             for( auto i : input ){
