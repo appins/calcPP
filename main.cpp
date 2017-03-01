@@ -31,7 +31,11 @@ int main(){
         // Delete operators
         {"delte", comms::DEL},
         {"del"  , comms::DEL},
-        {"--1", comms::DEL}
+        {"--1", comms::DEL},
+        // Max commands
+        {"max", comms::MAX},
+        // Treat * like a wildcard or a set of wildcards
+        {"123*9", comms::MAX},
 
     };
 

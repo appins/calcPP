@@ -9,6 +9,7 @@ namespace comms {
     const unsigned short MEAN = 3;
     const unsigned short CLEAR = 4;
     const unsigned short DEL = 5;
+    const unsigned short MAX = 6;
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd

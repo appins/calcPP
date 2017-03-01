@@ -114,6 +114,27 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             }
 
             break;
+        } 
+        
+        // Get maximum value in the vector
+        case 6: {
+            // If input size is zero, exit before other code is done
+            if( !input.size() ){
+                break;
+            }
+
+            // We shouldn't start with zero just incase the array is all negative
+            auto temp = input[0];
+
+            for( auto i : input ){
+                if( i > temp ){
+                    temp = i;
+                }
+            }
+
+            res.push_back(temp);
+
+            break;
         }
 
         // This shouldn't be called unless there is some issue matching commands
@@ -121,7 +142,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             res = input;
             std::cout << "Command not found" << std::endl;
 
-            // If this was called with a nonzero command, there is definately an issue
+            // If this was called with a nonzero command, there is most likley an issue
             if( command ){
                 std::cout << "Please report that the command " << command << " might be broken." << std::endl;
             }
