@@ -150,6 +150,26 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             break;
         }
 
+        // Get the minimum value
+        case 7: {
+            // If input size is zero, exit before other code is done
+            if( !input.size() ){
+                break;
+            }
+
+            auto temp = input[0];
+
+            for( auto i : input ){
+                if( i < temp ){
+                    temp = i;
+                }
+            }
+
+            res.push_back(temp);
+
+            break;
+        }
+
         // This shouldn't be called unless there is some issue matching commands
         default: {
             res = input;

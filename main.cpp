@@ -36,6 +36,9 @@ int main(){
         {"max", comms::MAX},
         // Treat * like a wildcard or a set of wildcards. That is the only way to make sense of this command
         {"123*9", comms::MAX},
+        // Min commands
+        {"min", comms::MIN},
+        {"123*1", comms::MIN}
         
     };
 

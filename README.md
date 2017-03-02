@@ -46,6 +46,7 @@ Just enter a number and hit enter to add it to the "Stack"
 | `MUL` | `*` | Take the product of every number |
 | `MEAN` | `+/` | Take the average of every number |
 | `MAX` | `123*9` | Get the largest number |
+| `MIN` | `123*1` | Get the smallest number |
 
 ### Array modification commands
 | Command | Shortcut | Function |
