@@ -39,11 +39,12 @@ int main(){
         // Min commands
         {"min", comms::MIN},
         {"123*1", comms::MIN}
-        
+         
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable
     vector<double> nstack = {};
+    vector<double> undocomm = {};
 
     cout << "[ Oldest >> Newest ]" << endl;
      
@@ -64,10 +65,22 @@ int main(){
         else if(isNumber(input)){
             nstack.push_back(std::stod(input));
         }
-        
+       
         else {
+
             // Put input into lower case
             toLowerCase(input);
+
+            if(input == "undo"){
+                if(undocomm.size() == 0){
+                    cout << "> Nothing inside of undo vector. Use DEL instead!" << endl;
+                }
+                else {
+                    nstack = undocomm;
+                    dispVec(nstack);
+                }
+                continue;
+            }
 
             unsigned short noChange = isNoChange(input) << 7;
             int lookup = corr[input] | noChange;
@@ -77,12 +90,15 @@ int main(){
                 cout << "Command not found" << endl;
             }
             else {
+                // Add an easy way to undo
+                undocomm = nstack;
+
                 // If we have nochange set, we shouldn't overwrite our vector. We should just display the change
                if( lookup & comms::NOCHANGE){
                    dispVec(process(nstack, lookup), false);
                }
                else {
-                   nstack = process(nstack, lookup); 
+                   nstack = process(nstack, lookup);
                }
             }
         }

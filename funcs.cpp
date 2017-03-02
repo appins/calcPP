@@ -157,6 +157,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
                 break;
             }
 
+            // We shouldn't start with zero incase the numbers are all over zero
             auto temp = input[0];
 
             for( auto i : input ){
@@ -169,6 +170,8 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
 
             break;
         }
+
+        
 
         // This shouldn't be called unless there is some issue matching commands
         default: {
