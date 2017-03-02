@@ -56,3 +56,4 @@ Just enter a number and hit enter to add it to the "Stack"
 
 #### One more thing
 All commands will overwrite the vector by default. Add `_` add the end of a command (say `add_`) to disable this
+The "Example Usage" includes one of these
