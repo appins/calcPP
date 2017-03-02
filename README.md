@@ -53,6 +53,8 @@ Just enter a number and hit enter to add it to the "Stack"
 |---------|----------|----------|
 | `CLEAR` | `=0` | Clear the entire array |
 | `DELETE` | `--1` | Delte the newest element |
+| `UNDO` | N/A | Undo the last command |
+| `EXIT` | N/A | Exit the program |
 
 #### One more thing
 All commands will overwrite the vector by default. Add `_` add the end of a command (say `add_`) to disable this
