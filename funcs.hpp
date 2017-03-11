@@ -11,6 +11,8 @@ namespace comms {
     const unsigned short DEL = 5;
     const unsigned short MAX = 6;
     const unsigned short MIN = 7;
+    const unsigned short OTN = 8;
+    const unsigned short NTO = 9;
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd

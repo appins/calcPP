@@ -34,12 +34,19 @@ int main(){
         {"--1", comms::DEL},
         // Max commands
         {"max", comms::MAX},
-        // Treat * like a wildcard or a set of wildcards. That is the only way to make sense of this command
-        {"123*9", comms::MAX},
+        // These will be used from now on. Just figure out the solution with 123
+        {"123=3", comms::MAX},
         // Min commands
         {"min", comms::MIN},
-        {"123*1", comms::MIN}
-         
+        {"123=1", comms::MIN},
+        // Old to new commands
+        {"otn", comms::OTN},
+        {"oldtonew", comms::OTN},
+        {"123=231", comms::OTN},
+        // New to old commands
+        {"nto", comms::NTO},
+        {"newtoold", comms::NTO},
+        {"123=312", comms::NTO},
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable
@@ -77,8 +84,9 @@ int main(){
                 }
                 else {
                     nstack = undocomm;
-                    dispVec(nstack);
                 }
+                dispVec(nstack);
+
                 continue;
             }
 

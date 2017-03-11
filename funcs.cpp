@@ -171,7 +171,35 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             break;
         }
 
-        
+        // Move the oldest value to the newest value, do this by cycling
+        case 8: {
+            bool once = true;
+            auto endof = input[0];
+
+            for(auto i : input){
+                if(once){
+                    once = false;
+                    continue;
+                }
+                res.push_back(i);
+            }
+
+            res.push_back(endof);
+
+            break;
+        }
+
+        // Move the newest value to the oldest value
+        case 9: {
+            // Push back the oldest value first
+            res.push_back(input[input.size() - 1]);
+
+            for(int i = 0; i < input.size() - 1; i++){
+                res.push_back(input[i]);
+            }
+
+            break;
+        }
 
         // This shouldn't be called unless there is some issue matching commands
         default: {

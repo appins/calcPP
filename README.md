@@ -45,16 +45,18 @@ Just enter a number and hit enter to add it to the "Stack"
 | `ADD` | `+` | Take the sum of every number |
 | `MUL` | `*` | Take the product of every number |
 | `MEAN` | `+/` | Take the average of every number |
-| `MAX` | `123*9` | Get the largest number |
-| `MIN` | `123*1` | Get the smallest number |
+| `MAX` | `123=3` | Get the largest number |
+| `MIN` | `123=1` | Get the smallest number |
+| `NTO` | `123=312` | Shift the newest number where the oldest number was (cycles) |
+| `OTN` | `123=231` | Shift the oldest number where the newest number was (cycles) |
 
 ### Array modification commands
 | Command | Shortcut | Function |
 |---------|----------|----------|
 | `CLEAR` | `=0` | Clear the entire array |
 | `DELETE` | `--1` | Delte the newest element |
-| `UNDO` | N/A | Undo the last command |
-| `EXIT` | N/A | Exit the program |
+| `UNDO` | N/A | Undo the last command (note that _ doesnt work!)|
+| `EXIT` | N/A | Exit the program (note that _ doesnt work!)|
 
 #### One more thing
 All commands will overwrite the vector by default. Add `_` add the end of a command (say `add_`) to disable this
