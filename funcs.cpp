@@ -31,7 +31,7 @@ bool isNumber(std::string s){
 }
 
 // Display the vector in a readable way. If not the main vector, we should use a different "theme?"
-void dispVec ( const std::vector<double> &input, bool mainVec){
+void dispVec (const std::vector<double> &input, bool mainVec){
     if(mainVec){
         std::cout << "[ ";
     }
