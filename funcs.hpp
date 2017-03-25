@@ -7,13 +7,22 @@ namespace comms {
     const unsigned short ADD = 1;
     const unsigned short MUL = 2;
     const unsigned short MEAN = 3;
+
     const unsigned short CLEAR = 4;
     const unsigned short DEL = 5;
+
     const unsigned short MAX = 6;
     const unsigned short MIN = 7;
+
     const unsigned short OTN = 8;
     const unsigned short NTO = 9;
+
     const unsigned short LOOP = 10;
+
+    const unsigned short DIV = 11;
+    const unsigned short SUB = 12;
+
+
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd

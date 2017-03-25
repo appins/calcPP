@@ -11,21 +11,27 @@ bool isNumber(std::string s){
     bool seenDec = false;
 
     bool canBeMinus = true;
+    bool incorrect = false;
 
     for (auto i : s){
         if( i == '-' && canBeMinus ){
             canBeMinus = false;
+            incorrect = true;
             continue;
         }
         if( i == '.' && !seenDec ){
             seenDec = true;
+            incorrect = true;
             continue;
         }
         if( !std::isdigit(i) ){
             return false;
         }
+        incorrect = false;
         canBeMinus = false;
     }
+
+    if(incorrect) return false;
 
     return true;
 }
@@ -211,6 +217,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             double startValue;
             std::cin >> startValue;
 
+            // Check if the input was numberic, if not, try again until it is
             while(!std::cin){
                 std::cout << "Not numeric input, please try again: ";
 
@@ -220,6 +227,7 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
                 std::cin >> startValue; 
             }
 
+            // Repreat this process three times
             std::cout << "Stop value: ";
             double stopValue;
             std::cin >> stopValue;
@@ -256,9 +264,52 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             
             bool incPositive = (incValue > 0);
 
+            // Increment (or decrement) startValue by incValue until it is over or less than stopValue (Whichever is correct)
             for( ; (incPositive && startValue <= stopValue) || (!incPositive && startValue >= stopValue); startValue += incValue){
                 res.push_back(startValue);
             }
+
+            break;
+        }
+
+        // Divide the last two numbers, exactly like you would expect 
+        case 11: {
+            res = input;
+
+            // We need at least two
+            if(res.size() < 2){
+                break;
+            }
+
+            // Denominator
+            auto denom = res[res.size() - 1];
+
+            // Divide by zero error
+            if(denom == 0){
+                std::cout << "Divide by zero error" << std::endl;
+                break;
+            }
+
+            res.pop_back();
+            res[res.size() - 1] /= denom;
+
+            break;
+        }
+        
+        // Subtract the second last number by the last number
+        case 12: {
+            res = input;
+
+            // We need 2 elements
+            if(res.size() < 2){
+                break;
+            }
+
+            // Subractor
+            auto subtr = res[res.size() - 1];
+            res.pop_back();
+
+            res[res.size() - 1] -= subtr;
 
             break;
         }

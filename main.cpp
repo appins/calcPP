@@ -34,7 +34,6 @@ int main(){
         {"--1", comms::DEL},
         // Max commands
         {"max", comms::MAX},
-        // These will be used from now on. Just figure out the solution with 123
         {"123=3", comms::MAX},
         // Min commands
         {"min", comms::MIN},
@@ -50,6 +49,15 @@ int main(){
         // Loop insert commands
         {"loop", comms::LOOP},
         {"2-4-6", comms::LOOP},
+        // Divide function
+        {"divide", comms::DIV},
+        {"div", comms::DIV},
+        {"/", comms::DIV},
+        // Minus function
+        {"sub", comms::SUB},
+        {"minus", comms::SUB},
+        {"subtract", comms::SUB},
+        {"-", comms::SUB}
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

@@ -50,6 +50,8 @@ Just enter a number and hit enter to add it to the "Stack"
 | `NTO` | `123=312` | Shift the newest number where the oldest number was (cycles) |
 | `OTN` | `123=231` | Shift the oldest number where the newest number was (cycles) |
 | `LOOP` | `2-4-6` | Asks for a starting, stopping, and increment value. Inserts every number in the range. |
+| `DIV` | `/` | Divide the second to last number by the last number (secondToLast / last) |
+| `SUB` | `-` | Subtract the second to last number by the last number (secondToLast - last) |
 
 ### Array modification commands
 | Command | Shortcut | Function |
