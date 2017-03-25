@@ -200,6 +200,68 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
 
             break;
         }
+        
+        // Insert a range of numbers
+        case 10: {
+            // We still want to keep the old array so we should start out with it
+            res = input;
+            
+            // Ask the user about what they want from it
+            std::cout << "Starting value: ";
+            double startValue;
+            std::cin >> startValue;
+
+            while(!std::cin){
+                std::cout << "Not numeric input, please try again: ";
+
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                std::cin >> startValue; 
+            }
+
+            std::cout << "Stop value: ";
+            double stopValue;
+            std::cin >> stopValue;
+
+            while(!std::cin){
+                std::cout << "Not numeric input, please try again: ";
+
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                std::cin >> stopValue; 
+            }
+
+            std::cout << "Increment value: ";
+            double incValue;
+            std::cin >> incValue;
+
+            while(!std::cin){
+                std::cout << "Not numeric input, please try again: ";
+
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                std::cin >> incValue; 
+            }
+
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            // If there is some error where the loop will never finish, don't preform the loop
+            if((startValue > stopValue && incValue > 0) || incValue == 0 ||
+                    (startValue < stopValue && incValue < 0)){
+                break;
+            }
+            
+            bool incPositive = (incValue > 0);
+
+            for( ; (incPositive && startValue <= stopValue) || (!incPositive && startValue >= stopValue); startValue += incValue){
+                res.push_back(startValue);
+            }
+
+            break;
+        }
 
         // This shouldn't be called unless there is some issue matching commands
         default: {

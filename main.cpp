@@ -47,6 +47,9 @@ int main(){
         {"nto", comms::NTO},
         {"newtoold", comms::NTO},
         {"123=312", comms::NTO},
+        // Loop insert commands
+        {"loop", comms::LOOP},
+        {"2-4-6", comms::LOOP},
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

@@ -13,6 +13,7 @@ namespace comms {
     const unsigned short MIN = 7;
     const unsigned short OTN = 8;
     const unsigned short NTO = 9;
+    const unsigned short LOOP = 10;
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd
