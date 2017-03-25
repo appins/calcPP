@@ -56,7 +56,8 @@ Just enter a number and hit enter to add it to the "Stack"
 |---------|----------|----------|
 | `CLEAR` | `=0` | Clear the entire array |
 | `DELETE` | `--1` | Delte the newest element |
-| `SWAP` | N/A | Switch between the current vector and the background one (note that _ doesn't work!)
+| `SWAP` | N/A | Switch between the current vector and the background one (note that _ doesn't work!)|
+| `COPY` | N/A | Copies the current vector to the background one (no _ command)|
 | `UNDO` | N/A | Undo the last command (note that _ doesn't work!)|
 | `EXIT` | N/A | Exit the program (note that _ doesn't work!)|
 

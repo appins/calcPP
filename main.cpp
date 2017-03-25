@@ -103,6 +103,15 @@ int main(){
                 continue;
             }
 
+            // Copy the current array (nstack) to the second one
+            if(input == "copy"){
+                swapstack = nstack;
+
+                dispVec(nstack);
+
+                continue;
+            }
+
             unsigned short noChange = isNoChange(input) << 7;
             int lookup = corr[input] | noChange;
 
