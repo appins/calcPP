@@ -55,6 +55,7 @@ int main(){
     // Not technically a stack, but hey. Vector for holding all the variable
     vector<double> nstack = {};
     vector<double> undocomm = {};
+    vector<double> swapstack = {};
 
     cout << "[ Oldest >> Newest ]" << endl;
      
@@ -88,6 +89,15 @@ int main(){
                 else {
                     nstack = undocomm;
                 }
+                dispVec(nstack);
+
+                continue;
+            }
+            
+            // Swap two arrays. Allows manipulation of two data sets at the same time
+            if(input == "swap"){
+                swapstack.swap(nstack);
+
                 dispVec(nstack);
 
                 continue;
