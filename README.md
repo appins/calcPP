@@ -52,6 +52,7 @@ Just enter a number and hit enter to add it to the "Stack"
 | `LOOP` | `2-4-6` | Asks for a starting, stopping, and increment value. Inserts every number in the range. |
 | `DIV` | `/` | Divide the second to last number by the last number (secondToLast / last) |
 | `SUB` | `-` | Subtract the second to last number by the last number (secondToLast - last) |
+| `FILL` | `0.0.0.0` | Asks you to pick a value and an amount, adds the value to the end amount times |
 
 ### Array modification commands
 | Command | Shortcut | Function |

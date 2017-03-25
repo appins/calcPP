@@ -49,15 +49,19 @@ int main(){
         // Loop insert commands
         {"loop", comms::LOOP},
         {"2-4-6", comms::LOOP},
-        // Divide function
+        // Divide commands
         {"divide", comms::DIV},
         {"div", comms::DIV},
         {"/", comms::DIV},
-        // Minus function
+        // Minus commands
         {"sub", comms::SUB},
         {"minus", comms::SUB},
         {"subtract", comms::SUB},
-        {"-", comms::SUB}
+        {"-", comms::SUB},
+        // Fill commands
+        {"fill", comms::FILL},
+        {"insert", comms::FILL},
+        {"0.0.0.0", comms::FILL}
     };
 
     // Not technically a stack, but hey. Vector for holding all the variable

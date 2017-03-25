@@ -22,7 +22,7 @@ namespace comms {
     const unsigned short DIV = 11;
     const unsigned short SUB = 12;
 
-
+    const unsigned short FILL = 13;
 
     // If the input shouldn't be changed, this will be set
     // This means, most of the time, they put a _ on the end of the comamnd

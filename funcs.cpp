@@ -314,6 +314,48 @@ std::vector<double> process ( const std::vector<double> &input, unsigned short c
             break;
         }
 
+        case 13: {
+            // Start with the old array
+            res = input;
+
+            std::cout << "Please enter a number to be inserted: ";
+            double numericValue;
+            std::cin >> numericValue;
+
+            while(!std::cin){
+                std::cout << "Not numeric input, please try again: ";
+
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                std::cin >> numericValue; 
+            }
+
+            std::cout << "How many times should we insert that number: ";
+            double amount;
+            std::cin >> amount;
+
+            while(!std::cin){
+                std::cout << "Not numeric input, please try again: ";
+
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+                std::cin >> amount; 
+            }
+
+            // If under 1, don't do anything
+            if(amount < 1){
+                break;
+            }
+
+            for(; amount >= 1; amount--){
+               res.push_back(numericValue);
+            }
+
+            break;
+        }
+
         // This shouldn't be called unless there is some issue matching commands
         default: {
             res = input;
