@@ -116,8 +116,22 @@ int main(){
             }
 
             // Copy the current array (nstack) to the second one
-            if(input == "copy"){
-                swapstack = nstack;
+            if(input == "copy" || input == "save"){
+                cout << "> This will overwrite the stack in swap." << endl;
+                cout << "> Are you sure [Yes / No]: ";
+
+                string opt;
+                getline(cin, opt);
+
+                toLowerCase(opt);
+                if(opt == "yes"){
+                    cout << "> Operation successful!" << endl;
+                    swapstack = nstack;
+                }
+                else{
+                    cout << "> Operation not completed" << endl;
+                }
+                
 
                 dispVec(nstack);
 
