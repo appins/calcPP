@@ -1,4 +1,5 @@
-## calc++
+[![AppIns](https://i.imgur.com/xEPu5Ug.png)](https://github.com/appins)
+# Calc++
 
 #### Why?
 It is exceptionally useful for calculations with tons of variables, (say a grade or a gpa) and is open source
